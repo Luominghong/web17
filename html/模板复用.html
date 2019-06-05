@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/artTemplate.js"></script>
+</head>
+<body>
+<div id="container1">
+    父亲:
+</div>
+<div id="container2">
+    前妻:
+</div>
+<div id="container3">
+    现任妻子:
+</div>
+<script type="text/html" id="dad">
+<div>{{include 'son1' a}}</div>
+</script>
+<script type="text/html" id="mom1">
+
+</script>
+<script type="text/html" id="mom2">
+
+</script>
+<script type="text/html" id="son1">
+        <div>
+            头发: {{hair}}
+            眼睛: {{eyes}}
+        </div>
+</script>
+<script type="text/html" id="son2">
+    <div>头发: {{hair}}
+        眼睛: {{eyes}}
+        身高: {{height}}
+
+    </div>
+</script>
+<script>
+    let data={
+        a:{
+            eyes:"big",
+            hair:"green"
+        },
+        b:{
+            eyes: "small",
+            hair: "yellow",
+            height: 180
+        }
+    }
+</script>
+
+</body>
+</html>

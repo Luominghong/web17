@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/artTemplate.js"></script>
+</head>
+<body>
+<div id="btn"></div>
+<script type="text/html" id="mo">
+        <div>{{name}}</div>
+        <div>{{version}}</div>
+        {{if  globalReleased}}
+            <div>购票</div>
+        {{else}}<div>预售</div>
+        {{/if}}
+        {{if readyState==4 && status == 200}}
+        成功
+        {{/if}}
+</script>
+<script>
+    var data={
+        name: "哥斯拉2: 怪兽之王",
+        version: '',
+        globalReleased: false,
+        readyState: 4,
+        status: 502
+    }
+    var html=template("mo",data);
+    document.querySelector("#btn").innerHTML=html;
+</script>
+</body>
+</html>

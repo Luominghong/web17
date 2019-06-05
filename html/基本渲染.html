@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/artTemplate.js"></script>
+</head>
+<body>
+        <!--1页面容器-->
+        <div id="btn"></div>
+        <!--2模板-->
+        <script type="text/html" id="mo">
+        <h3>{{zi}}</h3>
+        <p>{{name}}</p>
+        <p>{{arg}}</p>
+        <p>{{@are}}</p>
+        <p>{{@ad}}</p>
+</script>
+        <!--3将数据渲染到模板中-->
+        <!--4将渲染的数据添加到页面容器中-->
+<script>
+    let data={
+        zi:"自我介绍",
+        name:"我叫骆明弘",
+        arg:"12",
+        are:"<a href='基本渲染.html'>点击我</a>",
+        ad:"<sanp>我是一个sanp标签</sanp>"
+    }
+    let html=template("mo",data)
+    document.querySelector("#btn").innerHTML=html;
+</script>
+</body>
+</html>
